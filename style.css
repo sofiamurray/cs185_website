@@ -1,0 +1,18 @@
+.header {
+
+}
+.nav-bar > div {
+    padding: 10px;
+}
+.tab {
+    background-color: cornflowerblue;
+    color: white;
+    
+}
+.tab.extra {
+    background-color: darkseagreen; 
+    color: white;
+}
+#main-body {
+    display: flex;
+}
