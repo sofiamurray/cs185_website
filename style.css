@@ -1,10 +1,18 @@
 .header {
     font-family: Abril Fatface, Arvo;
+    font-size: 1.25em;
     text-align:center;
     color: #685044;
     background-color: #EDBDB3;
     padding: 10px
 }
+
+body{
+    background-color: #FAE4D2;
+}
+
+/*       NAVIGATION BAR       */
+
 .nav-bar > div {
     padding: 10px;
 }
@@ -15,34 +23,153 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #E9AFA3;
-  }
+}
   
-  li {
+li {
     display:inline;
-  }
+}
   
-  li a {
+li a {
     display:inline-block;
     color:#FFE8D6;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-family: Arvo;
-  }
+}
   
   /* Change the link color to #111 (black) on hover */
-  li a:hover {
+li a:hover {
     background-color: #FCBDB0;
-  }
+}
 .active {
     background-color: #BF9086;
 }
-body{
-    background-color: #FAE4D2;
-}
-.main-body {
+
+/*            CONTENT           */
+
+/*           HOME PAGE         */
+
+#home .main-body {
     display: flex;
     font-family: Open Sans;
-    padding-top: 30px;
+    padding: 30px;
     color: #685044
+}
+
+#home .text_title{
+    padding: 10px;
+    font-family: Arvo;
+}
+#home img{
+    width: 300px; 
+    height: 386.5px;
+    border: 15px solid #EDBDB3;
+}
+#home .img {
+    padding-right: 30px;
+    float: left;
+}
+
+h2{
+    font-family: Arvo;
+    font-size: 2em;
+}
+
+h3{
+    font-family: Arvo;
+    font-size: 1.5em;
+}
+
+/*           TRAVEL PAGE          */
+#images .main-body {
+    text-align: center;
+    font-family: Open Sans;
+    padding: 0px;
+    color: #685044
+}
+
+#images .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+#images .column {
+    flex: 50%;
+    max-width: 24.35%;
+    padding: 0 4px;
+}
+  
+#images .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+  
+ 
+@media screen and (max-width: 400px) {
+    #images .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+}
+  
+
+@media screen and (max-width: 400px) {
+    #images .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+}
+/*           MUSIC PAGE          */
+#videos .main-body {
+    text-align: center;
+    font-family: Open Sans;
+    padding: 0px;
+    color: #685044
+}
+
+#videos .column {
+    float: left;
+    width: 33.33%;
+    padding-top: 30px;
+  }
+  
+  /* Clear floats after the columns */
+ #videos .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+/*          COOKING PAGE         */
+
+#ext_links .main-body {
+    text-align: center;
+    font-family: Open Sans;
+    padding: 0px;
+    color: #685044;
+}
+
+#ext_links .text_title{
+    padding: 10px;
+    font-family: Arvo;
+}
+#ext_links img{
+    width: 200px; 
+    height: 257.7px;
+    border: 15px solid #EDBDB3;
+}
+#ext_links .img {
+    float: left;
+    padding-right: 30px;
+}
+#ext_links .recipe{
+    display: flex;
+    font-family: Open Sans;
+    padding: 30px;
+    color: #685044;
+    align-items: center;
 }
