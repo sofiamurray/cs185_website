@@ -40,7 +40,10 @@ ul {
 body{
     background-color: #FAE4D2;
 }
-.main-body {
+#home body{
+    background-color: white;
+}
+#main-body {
     display: flex;
     font-family: Open Sans;
     padding-top: 30px;
