@@ -74,6 +74,7 @@ li a:hover {
 h2{
     font-family: Arvo;
     font-size: 2em;
+    padding: 0px;
 }
 
 h3{
@@ -85,26 +86,104 @@ h3{
 #images .main-body {
     text-align: center;
     font-family: Open Sans;
-    padding: 0px;
+    padding: 0px ;
     color: #685044
+}
+
+#images .container {
+    margin: 0 auto;
+    max-width: 2000px;
+    padding: 0px;
 }
 
 #images .row {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    padding: 0 4px;
+    flex-direction: row;
 }
 
 #images .column {
-    flex: 50%;
-    max-width: 24.35%;
-    padding: 0 4px;
+    width: 25%;
+}
+
+@media screen and (max-width: 1200px) {
+    #images .column {
+      flex: 33.33%;
+      width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #images .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+}
+   
+#images .column img {   
+    max-width: 100%;
+    display: block;
+}
+
+
+/*           MUSIC PAGE          */
+
+#videos .main-body {
+    text-align: center;
+    font-family: Open Sans;
+    padding: 0px;
+    color: #685044;
+}
+
+#images .container {
+    margin: 0 auto;
+    max-width: 2000px;
+    padding: 0 10px;
 }
   
-#images .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+#videos .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+#videos .column {
+    float: left;
+    width: 33.33%;
+    padding-top: 30px;
+  }
+
+/*          COOKING PAGE         */
+
+#ext_links .main-body {
+    text-align: center;
+    font-family: Open Sans;
+    padding: 0px;
+    color: #685044;
+}
+
+#ext_links .text_title{
+    padding: 10px;
+    font-family: Arvo;
+}
+
+#ext_links img{
+    width: 200px; 
+    height: 257.7px;
+    border: 15px solid #EDBDB3;
+}
+
+#ext_links .img {
+    float: left;
+    padding-right: 30px;
+}
+
+#ext_links .recipe{
+    display: flex;
+    font-family: Open Sans;
+    padding: 30px;
+    color: #685044;
+    align-items: center;
 }
   
  
@@ -135,8 +214,7 @@ h3{
     width: 33.33%;
     padding-top: 30px;
   }
-  
-  /* Clear floats after the columns */
+
  #videos .row:after {
     content: "";
     display: table;

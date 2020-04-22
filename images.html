@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sofia's Corner - Travel</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Travel | Sofia's Corner</title>
+        <link rel="stylesheet" type="text/css" href="style_t.css">
     </head>
     <body id="images">
         <div class="header">
@@ -19,45 +19,85 @@
         </div>
 
         <div class ="main-body">
+            <a href="#" id="back_to_top" >Back to top</a>
             <div>
                 <h2>My Travels:</h2>
                 <p>
                     These are some photos from my time abroad. 
                 </p>
             </div>
-            
-            <div class = "row"> 
 
-                <div class = "column">
-                    <img src="images/valencia1.jpg" alt="valencia1">
-                    <img src="images/barca1.jpg" alt="barca1">
-                    <img src="images/valencia2.jpg" alt="valencia2"> 
-                    <img src="images/madrid2.jpg" alt="madrid2"> 
-                    <img src="images/munich1.jpg" alt="munich1">
-                </div>
-                <div class = "column">
-                    <img src="images/munich3.jpg" alt="munich3">
-                    <img src="images/zurich3.jpg" alt="zurich3"> 
-                    <img src="images/dublin1.jpg" alt="dublin1">
-                    <img src="images/zurich1.jpg" alt="zurich1"> 
-                    <img src="images/dublin2.jpg" alt="dublin2">
-                </div>
-                <div class = "column">
-                    <img src="images/munich2.jpg" alt="munich2">
-                    <img src="images/madrid3.jpg" alt="madrid3"> 
-                    <img src="images/madrid4.jpg" alt="madrid4"> 
-                    <img src="images/madrid1.jpg" alt="madrid1">
-                    <img src="images/dublin3.jpg" alt="dublin3">
-                </div>
-                <div class = "column">
-                    <img src="images/buda2.jpg" alt="buda2">
-                    <img src="images/zurich2.jpg" alt="zurich2"> 
-                    <img src="images/zurich4.jpg" alt="zurich4">
-                    <img src="images/buda1.jpg" alt="buda1">
-                    <img src="images/barca2.jpg" alt="barca2">
-                </div>
+            <div class = "container">
+                         
+
+                        <img class="gallery portrait" id="pic" src="images/valencia_street.jpg" alt="valencia1">
+                        <img class="gallery portrait" id="pic" src="images/dublin_bar.jpg" alt="dublin1">
+
+                    
+
+                        <img class="gallery portrait" id="pic" src="images/valencia_paella.jpg" alt="valencia2"> 
+                        <img class="gallery portrait" id="pic" src="images/zurich_cat.jpg" alt="zurich3"> 
+
+                        
+
+                        <img class="gallery portrait" id="pic" src="images/barca_street.jpg" alt="barca1"> 
+                        <img class="gallery portrait" id="pic" src="images/dublin_cliffs.jpg" alt="dublin2">
+
+                        
+
+                        <img class="gallery portrait" id="pic" src="images/munich_building.jpg" alt="munich2">
+                        <img class="gallery portrait" id="pic" src="images/madrid_street.jpg" alt="madrid3"> 
+
+                        
+
+                        <img class="gallery portrait" id="pic" src="images/madrid_leaf.jpg" alt="madrid4"> 
+                        <img class="gallery portrait" id="pic" src="images/buda_emma.jpg" alt="buda2">
+
+                        
+
+                        <img class="gallery portrait" id="pic" src="images/zurich_house.jpg" alt="zurich4">
+                        <img class="gallery portrait" id="pic" src="images/buda_view.jpg" alt="buda1">
+
+                         
+
+                        <img class="gallery portrait" id="pic" src="images/barca_fountain.jpg" alt="barca2">
+
+
+
+                        
+
 
             </div>
+
+            <div id="myModal" class="modal">
+            <img class="modal-content" id="expanded">
+              
+            </div>
+  
+            <script type="text/javascript">
+                  var modal = document.getElementById('myModal');
+                  var images = document.getElementsByClassName('gallery');
+                  var modalImg = document.getElementById("expanded");
+    
+                  for (var i = 0; i < images.length; i++) {
+                      var img = images[i];
+                      img.onclick = function(display_img) {
+                          
+                          modal.style.display = "block";
+                          modalImg.src = this.src;
+                      }  
+                  }
+
+                  window.onclick = function(event) {
+                      if (event.target == modal) {
+                          modal.style.display = "none";
+                  }
+                }
+  
+            </script>
+  
+
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
